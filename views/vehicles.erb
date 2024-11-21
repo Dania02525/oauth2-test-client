@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>OAuth Tester</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.1/css/fontawesome.min.css">
+  </head>
+  <body>
+    <div class="container">
+      <h2>Vehicles</h2>
+      <br>
+      <br>
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Name</th>
+            <th scope="col">Ownership</th>
+            <th scope="col">Type</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @vehicles.each do |vehicle| %>
+            <tr>
+              <th scope="row"><%=vehicle['id'] %></th>
+              <td><%=vehicle['name'] %></td>
+              <td><%=vehicle['ownership'] %></td>
+              <td><%=vehicle['vehicle_type_name'] %></td>
+            </tr>
+          <%end %>
+        </tbody>
+      </table>
+    </div>
+
+
+
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  </body>
+</html>

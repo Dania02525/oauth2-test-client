@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>OAuth Tester</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.1/css/fontawesome.min.css">
+  </head>
+  <body>
+    <div class="container">
+      <span>Configure redirect URL as <q><%= @redirect_url %></q></span>
+      <br>
+      <br>
+      <form method="post">
+        <div class="form-group">
+          <label for="client_id">Client ID</label>
+          <input type="text" class="form-control" id="client_id" placeholder="Enter Client Id" value="<%= @client_id %>" name="client_id">
+        </div>
+        <div class="form-group">
+          <label for="client_secret">Client Secret</label>
+          <input type="text" class="form-control" id="client_secret" placeholder="Client Secret" value="<%= @client_secret %>" name="client_secret">
+        </div>
+        <div class="form-group">
+          <label for="oauth_server_url">OAuth Server Base URL</label>
+          <input type="text" class="form-control" id="oauth_server_url" value="<%= @oauth_server_url %>" name="oauth_server_url">
+        </div>
+        <div class="form-group">
+          <label for="account_token">Account Token</label>
+          <input type="text" class="form-control" id="account_token" value="<%= @account_token %>" name="account_token">
+        </div>
+        <button type="submit" class="btn btn-primary">Authorize!</button>
+      </form>
+    </div>
+
+
+
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  </body>
+</html>
